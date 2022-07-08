@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BlankApp3.Views.MainPage"
+             Title="{Binding Title}">
+
+    <StackLayout WidthRequest="250" Padding="10" HeightRequest="300" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <Label Text="{Binding Question}" HorizontalTextAlignment="Start" FontSize="Large"/>
+        <Label Text="請輸入你的答案" />
+        <Entry Text="{Binding Answer}" Keyboard="Numeric"/>
+        <Label Text="{Binding IsCorrect}" FontSize="Large" TextColor="Red"  Margin="5"/>
+        <Button Command="{Binding BtnCmdReCreate}" Text="重新產生問題" FontSize="Medium" BorderColor="Blue" BorderWidth="1" BackgroundColor="LightBlue"/>
+        <Button Command="{Binding BtnCmdCheck}" Text="送出答案" FontSize="Medium" BorderColor="Blue" BorderWidth="1" BackgroundColor="LightBlue"/>
+    </StackLayout>
+
+</ContentPage>
